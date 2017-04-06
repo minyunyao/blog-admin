@@ -1,0 +1,95 @@
+<div *ngIf="boundMark">
+<div class="xwin_mask" style="opacity: 0.2; z-index: 1002; display: none;"></div>
+<div class="xwin" style="width: 446px; z-index: 1002; left: 737px; top: 389px; height: auto;" draggable>
+	<table cellpadding="0" cellspacing="0" class="xwin_tb">
+		<tbody>
+			<tr>
+				<td class="xwin_tl xwin_e_nw"></td>
+				<td class="xwin_tm xwin_e_n"></td>
+				<td class="xwin_tr xwin_e_ne"></td>
+			</tr>
+			<tr>
+				<td class="xwin_hl xwin_e_w"></td>
+				<td class="xwin_hm xwin_e_move">
+					<div class="xwin_title">华安1号灯浮</div>
+				</td>
+				<td class="xwin_hr xwin_e_e"></td>
+			</tr>
+			<tr>
+				<td class="xwin_ml xwin_e_w"></td>
+				<td class="xwin_mm">
+					<div class="xwin_body" style="width: 420px; height: auto;">
+						<div class="xwin_content">
+							<div class="locusBox" style="background:#fff;">
+								<div class="locusTab_main" style="display: block;">
+									<table class="xinfo" style="height:auto;">
+										<tbody>
+											<tr>
+												<td width="60">设备编号：</td>
+												<td>
+													<div class="o" title="000615720015">000615720015</div>
+												</td>
+												<td width="60">航标编号：</td>
+												<td>
+													<div class="ro" title="4090.41">4090.41</div>
+												</td>
+											</tr>
+											<tr>
+												<td>航标名称：</td>
+												<td>
+													<div class="o" title="华安1号灯浮">华安1号灯浮</div>
+												</td>
+												<td>航标类型：</td>
+												<td>
+													<div class="ro" title="灯浮标">灯浮标</div>
+												</td>
+											</tr>
+											<tr>
+												<td>生产厂商：</td>
+												<td>
+													<div class="o" title="广州旭创">广州旭创</div>
+												</td>
+												<td>偏移距离：</td>
+												<td>
+													<div class="ro" title="3">3</div>
+												</td>
+											</tr>
+											<tr>
+												<td>蓄电池电流：</td>
+												<td>
+													<div class="o" title="0.10">0.10</div>
+												</td>
+												<td>蓄电池电压：</td>
+												<td>
+													<div class="ro" title="14.04">14.04</div>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<div class="btnLink">
+									<a href="javascript:void(0)" ng-click="">遥测</a>
+									<a href="javascript:void(0)" ng-click="">遥控</a>
+									<a href="javascript:void(0)" ng-click="">报警</a>
+									<a href="javascript:void(0)" ng-click="">历史</a>
+									<a href="javascript:void(0)" ng-click="MotionTrail(info.deviceNumber)" style="margin-right: 6px;">轨迹</a>
+									<a href="javascript:void(0)" ng-click="" style="margin-right: 0px;">统计</a>
+								</div>
+
+							</div>
+						</div>
+						<div class="xwin_full xwin_alpha" style="height: 149px; display: none;"></div>
+					</div>
+				</td>
+				<td class="xwin_mr xwin_e_e"></td>
+			</tr>
+			<tr>
+				<td class="xwin_bl xwin_e_sw"></td>
+				<td class="xwin_bm xwin_e_s"></td>
+				<td class="xwin_br xwin_e_se"></td>
+			</tr>
+		</tbody>
+	</table>
+	<a href="javascript:void(0)" (click)="closeWin()" class="xwin_close">[关闭]</a>
+</div>
+</div>

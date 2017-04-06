@@ -1,0 +1,208 @@
+#container {
+    margin-top: 60px;
+}
+.sidebar-scroll {
+    position: fixed;
+    overflow-y: scroll;
+    height: 100%;
+    width: 180px;
+    z-index: 100;
+}
+#sidebar {
+    z-index: 100;
+    background: #404040;
+}
+/* sidebar menu */
+
+[class^="icon-"], [class*=" icon-"] {
+    margin-top: 0;
+}
+
+#sidebar ul{
+    margin-bottom:180px !important;
+}
+
+#sidebar .navbar-search {
+    border: 0px;
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    box-shadow: none !important;
+}
+
+#sidebar.closed {
+    display: none;
+}
+
+#sidebar > ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin: 0;
+    padding: 0;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+}
+
+#sidebar > ul > li {
+    display: block;
+    margin: 0 0 1px 0px;
+    padding: 0;
+    border: 0px;
+    line-height: 30px;
+}
+.navbar-collapse{
+    padding: 0 !important;
+}
+
+#sidebar > ul > li > a {
+    display: block;
+    position: relative;
+    margin: 0;
+    border: 0px;
+    -webkit-border-radius: 0px !important;
+    -moz-border-radius: 0px !important;
+    border-radius: 0px !important;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: normal;
+    text-align: left;
+    width: 180px;
+    padding: 5px 15px;
+    background: #505050;
+
+    transition-duration: 500ms;
+    transition-property: width, background;
+    transition-timing-function: ease;
+    -webkit-transition-duration: 500ms;
+    -webkit-transition-property: width, background;
+    -webkit-transition-timing-function: ease;
+}
+#sidebar ul {
+    margin-top: 1px !important;
+    width: 100%;
+}
+
+#sidebar > ul > li > a > span {
+    display: inline-block;
+    line-height: normal;
+}
+
+#sidebar > ul > li a i {
+    color:#eaeaea;
+    font-size: 16px;
+}
+
+#sidebar > ul > li a i {
+    width: 25px;
+}
+
+#sidebar > ul > li.active > a{
+    border: none;
+}
+
+#sidebar > ul > li.active > a .arrow {
+    margin-right: 0px;
+}
+
+#sidebar > ul > li.active > a .arrow.open {
+    margin-right: 0px;
+}
+
+#sidebar ul > li > a .arrow {
+    float: right;
+    margin-top: 12px;
+    margin-right: 0px;
+    width: 0;
+    height: 0;
+    border-left: 4px solid #A0A0A0;
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+}
+
+#sidebar > ul > li > a .arrow.open {
+    float: right;
+    margin-top: 14px;
+    margin-right: 0px;
+    width: 0;
+    height: 0;
+    border-top: 5px solid #A0A0A0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+}
+
+#sidebar ul > li.active > a .arrow, #sidebar ul > li > a:hover .arrow {
+    float: right;
+    margin-top: 12px;
+    margin-right: 0px;
+    width: 0;
+    height: 0;
+    border-left: 4px solid #fff;
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+}
+
+#sidebar > ul > li.active > a .arrow.open, #sidebar > ul > li > a:hover .arrow.open {
+    float: right;
+    margin-top: 14px;
+    margin-right: 0px;
+    width: 0;
+    height: 0;
+    border-top: 5px solid #fff;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+}
+
+#sidebar > ul > li > ul.sub {
+    display: none;
+    list-style: none;
+    clear: both;
+    margin: 0px;
+     padding: 0 ;
+}
+
+#sidebar > ul > li > ul.sub {
+    margin-bottom: 0 !important;
+}
+#sidebar > ul > li.active > ul.sub {
+    display: block;
+    margin-bottom: 0 !important;
+}
+
+#sidebar > ul > li > ul.sub > li {
+    background: none !important;
+    padding: 0px;
+    margin-bottom: 1px;
+}
+
+#sidebar > ul > li > ul.sub > li > a {
+    display: block;
+    position: relative;
+    padding: 10px 10px 10px 45px;
+    color: #ccc;
+    text-decoration: none;
+    text-shadow: 0 1px 1px #000;
+    font-size: 12px;
+    font-weight: normal;
+    line-height: normal;
+}
+#sidebar > ul > li.active > a, #sidebar > ul > li >a:hover, #sidebar > ul > li:hover>a{
+    background: #4a8bc2;
+}
+#sidebar > ul > li > ul.sub > li > a:hover, #sidebar > ul > li > ul.sub > li.active > a{
+    background: #575757;
+    transition-duration: 500ms;
+    transition-property: width, background;
+    transition-timing-function: ease;
+    -webkit-transition-duration: 500ms;
+    -webkit-transition-property: width, background;
+    -webkit-transition-timing-function: ease;
+}
+/* body container */
+#main-content {
+    margin-top: 0px;
+    margin-left: 180px;
+    min-height: 1000px;
+    background: #fff;
+    margin-bottom: 40px !important;
+}

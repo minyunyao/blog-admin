@@ -1,0 +1,47 @@
+
+    <app-top-menu></app-top-menu>
+    <!--主体区域-->
+<div class="container-fluid">
+    <div id="container" class="row">
+        <!-- BEGIN SIDEBAR -->
+      <div class="sidebar-scroll">
+
+          <div id="sidebar" class="navbar-collapse collapse">
+              <ul class="sidebar-menu">
+                  <li routerLinkActive="active" class="sub-menu">
+                    <a routerLink="workspace" >
+                        <i class="icon-dashboard"></i>
+                        <span>控制台</span>
+                    </a>
+                    </li>
+                    <li class="sub-menu" routerLinkActive="active">
+                        <a class="" href="javascript:;">
+                            <i class="icon-map-marker"></i>
+                            <span>地图</span>
+                            <span class="arrow"></span>
+                        </a>
+                        <ul class="sub">
+                            <li routerLinkActive="active"><a  routerLink="map/leaflet" class="">Vector地图</a></li>
+                        </ul>
+                    </li>
+                    <li class="sub-menu" routerLinkActive="active">
+                        <a class="" href="javascript:;">
+                            <i class="icon-user"></i>
+                            <span>用户管理</span>
+                            <span class="arrow"></span>
+                        </a>
+                        <ul class="sub">
+                            <li routerLinkActive="active"><a  routerLink="user/usertable/page/1" class="">用户列表</a></li>
+                        </ul>
+                    </li>
+              </ul>
+              <!-- END SIDEBAR MENU -->
+          </div>
+      </div>
+      <!-- BEGIN PAGE -->  
+      <div id="main-content">
+          <router-outlet></router-outlet>
+      </div>
+   </div>
+</div>
+    <app-footer-info></app-footer-info>

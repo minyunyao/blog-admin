@@ -1,0 +1,151 @@
+<div *ngIf="unBoundMark">
+<div class="xwin_mask" style="opacity: 0.2; z-index: 1004; display: none;"></div>
+<div class="xwin" style="width: 446px; z-index: 1004; left: 100px; top: 246px; height: auto;" draggable>
+	<table cellpadding="0" cellspacing="0" class="xwin_tb">
+		<tbody>
+			<tr>
+				<td class="xwin_tl xwin_e_nw"></td>
+				<td class="xwin_tm xwin_e_n"></td>
+				<td class="xwin_tr xwin_e_ne"></td>
+			</tr>
+			<tr>
+				<td class="xwin_hl xwin_e_w"></td>
+				<td class="xwin_hm xwin_e_move">
+					<div class="xwin_title">{{unBoundMark.markName}}</div>
+				</td>
+				<td class="xwin_hr xwin_e_e"></td>
+			</tr>
+			<tr>
+				<td class="xwin_ml xwin_e_w"></td>
+				<td class="xwin_mm">
+					<div class="xwin_body" style="width: 420px; height: auto;">
+						<div class="xwin_content">
+							<div class="locusBox" style="background:#fff;">
+								<div class="locusTab_main" style="display: block;">
+									<table class="xinfo" style="height:auto;">
+										<tbody>
+											<tr>
+												<td width="60">航标编号：</td>
+												<td>
+													<div class="o" title="4051.055">4051.055</div>
+												</td>
+												<td width="60">航标名称：</td>
+												<td>
+													<div class="ro" title="华能海门电厂5号灯浮">华能海门电厂5号灯浮</div>
+												</td>
+											</tr>
+											<tr>
+												<td>航标种类：</td>
+												<td>
+													<div class="o" title="灯浮标">灯浮标</div>
+												</td>
+												<td>航标功能：</td>
+												<td>
+													<div class="ro" title="右侧标">右侧标</div>
+												</td>
+											</tr>
+											<tr>
+												<td>航标性质：</td>
+												<td>
+													<div class="o" title="专用航标">专用航标</div>
+												</td>
+												<td>航标类别：</td>
+												<td>
+													<div class="ro" title=""></div>
+												</td>
+											</tr>
+											<tr>
+												<td>灯质：</td>
+												<td>
+													<div class="o" title=""></div>
+												</td>
+												<td>射程：</td>
+												<td>
+													<div class="ro" title=""></div>
+												</td>
+											</tr>
+											<tr>
+												<td>灯高：</td>
+												<td>
+													<div class="o" title=""></div>
+												</td>
+												<td>结构：</td>
+												<td>
+													<div class="ro" title="钢/铁架结构">钢/铁架结构</div>
+												</td>
+											</tr>
+											<tr>
+												<td>设置日期：</td>
+												<td>
+													<div class="o" title="2008-12-31">2008-12-31</div>
+												</td>
+												<td>管辖单位:</td>
+												<td>
+													<div class="ro" title="汕头航标处">汕头航标处</div>
+												</td>
+											</tr>
+											<tr>
+												<td>简介:</td>
+												<td>
+													<div class="o" title="43米">43米</div>
+												</td>
+												<td>设置地点:</td>
+												<td>
+													<div class="ro" title="汕头海门角">汕头海门角</div>
+												</td>
+											</tr>
+											<tr>
+												<td>经纬度：</td>
+												<td>
+													<div class="o" title="23°8′54.60″N 116°40′10.10″E">23°8′54.60″N 116°40′10.10″E</div>
+												</td>
+												<td>安全距离：</td>
+												<td>
+													<div class="ro" title="50">50</div>
+												</td>
+											</tr>
+											<tr>
+												<td>维护单位:</td>
+												<td>
+													<div class="o" title="潮阳航标管理站">潮阳航标管理站</div>
+												</td>
+												<td>所属单位:</td>
+												<td>
+													<div class="ro" title="华能国际电力股份有限公司海门电厂">华能国际电力股份有限公司海门电厂</div>
+												</td>
+											</tr>
+											<tr>
+
+												<td>最新重大变化日期:</td>
+												<td>
+													<div class="o" title="2008-12-31">2008-12-31</div>
+												</td>
+												<td>有无人值守:</td>
+												<td>
+													<div class="ro" title="false">false</div>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<div class="btnLink">
+									<a href="javascript:void(0)" class="btn_mid" ng-click="">绑定</a>
+								</div>
+
+							</div>
+						</div>
+						<div class="xwin_full xwin_alpha" style="height: 263px; display: none;"></div>
+					</div>
+				</td>
+				<td class="xwin_mr xwin_e_e"></td>
+			</tr>
+			<tr>
+				<td class="xwin_bl xwin_e_sw"></td>
+				<td class="xwin_bm xwin_e_s"></td>
+				<td class="xwin_br xwin_e_se"></td>
+			</tr>
+		</tbody>
+	</table>
+	<a href="javascript:void(0)" (click)="closeWin()" class="xwin_close">[关闭]</a>
+</div>
+</div>
