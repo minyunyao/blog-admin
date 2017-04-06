@@ -27,26 +27,7 @@ export class AppComponent {
 		this.toastr.setRootViewContainerRef(vcr);
 	}
   ngOnInit() {
-		this.router.events.subscribe((event) => {
-			console.log(event);
-      if (event instanceof RoutesRecognized) {
-                let params = {};
-                let destinationData = {};
-                let destinationName = '';
-                let destinationEvent = event.state.root.firstChild.children[0];
-								console.log(destinationEvent);
-                if (destinationEvent !== undefined) {
-								console.log(destinationEvent.url[0]);
-                    params = destinationEvent.params;
-                    destinationData = destinationEvent.data;
-                    // destinationName = destinationEvent.url[0].path;
-										destinationName=event.url;
-                }
-                let from = {name: this.router.url.slice(1)};
-                let destination = {name: destinationName, data: destinationData};
-                this.$storageService.storeDestinationState(destination, params, from);
-            }
-    })
+
 		this.globalClickCallbackFn = this.renderer.listen(this.elementRef.nativeElement, 'click', (event: any) => {
 			console.log("全局监听点击事件>" + event);
 		});

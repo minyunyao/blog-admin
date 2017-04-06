@@ -11,24 +11,17 @@ import { Mark } from '../../../models/mark-model';
 @Injectable()
 export class LeafletService {
     public map:Map;
-    public baseMaps:any;
-    public markListURL = 'src/mock-data/marklist-mock.json';
+   
+    public markListURL = 'api/marks';
 
     constructor(private http: Http){
-        this.baseMaps={
-            Chart: L.tileLayer("http://www.ais.msa.gov.cn/MapService?service=wmts&request=gettile&tilematrixset=advsearoad&tilematrix={z}&tilerow={y}&tilecol={x}&format=image/png&layer=default&style=default&version=1.0.0", {
-                attribution: '&copy; <a href=\"#\">深圳深蓝信息科技开发有限公司</a>'
-            }),
-            Esri: L.tileLayer("http://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}", {
-                attribution: 'Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ, TomTom, Intermap, iPC, USGS, FAO, NPS, NRCAN, GeoBase, Kadaster NL, Ordnance Survey, Esri Japan, METI, Esri China (Hong Kong), and the GIS User Community'
-            })
-        }
+       
     }
 
     public getMarkList():Observable<Mark[]>{
         return this.http.get(this.markListURL).map(
             (res:Response) => {
-                   let result=res.json();
+                   let result=res.json().datas.table.row;
                    return result;
          }).catch((error:any) => Observable.throw(error || 'Server error'));
   } 

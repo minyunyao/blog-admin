@@ -53,11 +53,6 @@ body {
     font-style: normal;
 }
 
-div, input, select, textarea, span, img, table, td, th, p, a, button, ul, li {
-    border-radius: 0 !important;
-    -moz-border-radius: 0 !important;
-    -webkit-border-radius: 0 !important;
-}
 
 /* custom dropdown */
 .dropdown-menu {

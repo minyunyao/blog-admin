@@ -20,11 +20,6 @@ export class AuthService {
 
         function authThen () {
             let isAuthenticated = this.principal.isAuthenticated();
-            console.log(isAuthenticated);
-            if(!isAuthenticated){
-                this.router.navigate(['login']);
-                return true;
-            }
             let toStateInfo = this.stateStorageService.getDestinationState().destination;
 
             // an authenticated user can't access to login and register pages
