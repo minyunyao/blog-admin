@@ -12,7 +12,8 @@ import {
     Principal,
     StateStorageService,
     LoginComponent,
-    LoginService
+    LoginService,
+    UserService
 } from './';
 
 @NgModule({
@@ -29,7 +30,8 @@ import {
     AccountService,
     Principal,
     StateStorageService,
-    LoginService
+    LoginService,
+    UserService
   ],
   exports:[
   	CommonModule,

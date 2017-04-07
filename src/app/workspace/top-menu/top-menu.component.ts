@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { LoginService } from '../../shared/login/login.service';
+import { LoginService,Principal,Account } from '../../shared';
 
 @Component({
   selector: 'app-top-menu',
@@ -8,13 +8,18 @@ import { LoginService } from '../../shared/login/login.service';
   styleUrls: ['./top-menu.component.css']
 })
 export class TopMenuComponent implements OnInit {
+  account: Account;
 
   constructor(
     public loginService:LoginService,
     private router: Router,
+    private principal: Principal
   ) { }
 
   ngOnInit() {
+     this.principal.identity().then((account) => {
+            this.account = account;
+        });
   }
   logout(){
     this.loginService.logout();

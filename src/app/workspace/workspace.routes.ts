@@ -5,10 +5,11 @@ export const workspaceRoutes = [
 	{
 		path: '',
 		component: WorkspaceComponent,
+		canActivate: [UserRouteAccessService],
 		children: [
 			// { path: '', redirectTo: 'map', pathMatch: 'full' },
 			{ path: 'user', loadChildren: '../user/user.module#UserModule' },
-			{ path: 'map', loadChildren: '../maps/maps.module#MapsModule'},
+			{ path: 'map', loadChildren: '../maps/maps.module#MapsModule' },
 		]
 	}
 ];
