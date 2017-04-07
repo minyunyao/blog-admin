@@ -7,7 +7,8 @@ export const workspaceRoutes = [
 		component: WorkspaceComponent,
 		canActivate: [UserRouteAccessService],
 		children: [
-			// { path: '', redirectTo: 'map', pathMatch: 'full' },
+			{ path: '', redirectTo: 'mark', pathMatch: 'full' },
+			{ path: 'mark', loadChildren: '../mark/mark.module#MarkModule' },
 			{ path: 'user', loadChildren: '../user/user.module#UserModule' },
 			{ path: 'map', loadChildren: '../maps/maps.module#MapsModule' },
 		]

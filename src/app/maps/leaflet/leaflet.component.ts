@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { LeafletService } from './services/leaflet.service';
+import { flyIn } from '../../animations/fly-in';
 import { Mark } from '../../models/mark-model';
 require('leaflet');
 let L = require('leaflet');
@@ -16,7 +17,10 @@ require('assets/leaflet/leaflet-list-markers/dist/leaflet-list-markers.src.js');
 @Component({
   selector: 'app-leaflet',
   templateUrl: './leaflet.component.html',
-  styleUrls: ['./leaflet.component.scss']
+  styleUrls: ['./leaflet.component.scss'],
+  animations: [
+    flyIn
+  ]
 })
 export class LeafletComponent implements OnInit {
   public markers: any;
@@ -56,14 +60,16 @@ export class LeafletComponent implements OnInit {
     //inizialize Leaflet List Markers
     var list = new L.Control.ListMarkers({ layer: this.markers, itemIcon: null });
     list.on('item-mouseover', function (e) {
+      
+    }).on('item-mouseout', function (e) {
+      // map.removeLayer(_this.marker);
+    }).on('item-click', function (e) {
       if (_this.marker) {
         map.removeLayer(_this.marker);
       }
       _this.marker = _this.leafletService.addMark(e.layer._latlng);
       map.addLayer(_this.marker);
-    }).on('item-mouseout', function (e) {
-      // map.removeLayer(_this.marker);
-    }).on('item-click', function (e) {
+      // map.panTo(e.layer._latlng);
       _this.markers.zoomToShowLayer(e.layer);
       map.panTo(e.layer._latlng);
     });
